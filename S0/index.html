@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía del Profesor: Sesión Kit de Supervivencia Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-[#0B2D48] leading-tight">Guía del Profesor<br><span class="text-[#00A9E0]">Sesión: Tu Kit de Supervivencia Digital</span></h1>
+            <p class="mt-4 text-lg text-gray-600">Recurso completo para la sesión de introducción de Digitalización (4º ESO)</p>
+        </header>
+
+        <main>
+            <section id="mission-briefing" class="mb-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="text-5xl mb-2">🎯</p>
+                        <h3 class="text-xl font-bold text-[#0B2D48]">Objetivo Principal</h3>
+                        <p class="text-gray-600 mt-2">Mostrar la relevancia de la asignatura como un entrenamiento práctico para la vida personal y futura profesional del alumnado.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="text-5xl mb-2">⏱️</p>
+                        <h3 class="text-xl font-bold text-[#0B2D48]">Duración Total</h3>
+                        <p class="text-gray-600 mt-2 text-2xl font-bold">45-50 <span class="text-base font-normal">minutos</span></p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="text-5xl mb-2">👨‍🏫</p>
+                        <h3 class="text-xl font-bold text-[#0B2D48]">Nivel</h3>
+                        <p class="text-gray-600 mt-2 text-2xl font-bold">4º <span class="text-base font-normal">de E.S.O.</span></p>
+                    </div>
+                     <div class="bg-white p-6 rounded-lg shadow-md">
+                        <p class="text-5xl mb-2">🔑</p>
+                        <h3 class="text-xl font-bold text-[#0B2D48]">Competencias Clave</h3>
+                        <p class="text-gray-600 mt-2">Digital, Aprender a aprender, Ciudadana, Sentido de la iniciativa y espíritu emprendedor.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="detailed-timeline" class="bg-white p-6 md:p-8 rounded-lg shadow-lg mb-12">
+                <h2 class="text-3xl font-bold text-center text-[#0B2D48] mb-8">Guion Detallado de la Sesión</h2>
+                <div class="space-y-8">
+                    <!-- Fase 1 -->
+                    <div class="flex flex-col md:flex-row items-start gap-6 p-4 border-l-4 border-[#00A9E0]">
+                        <div class="flex-shrink-0 text-center md:text-left">
+                            <div class="bg-[#00A9E0] text-white rounded-full w-20 h-20 flex flex-col items-center justify-center">
+                                <span class="text-2xl font-bold">Fase 1</span>
+                                <span class="text-xs">15-20 min</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-[#00A9E0]">El Entrenamiento: Presentación y Módulos</h3>
+                            <p class="text-gray-600 mb-4">Objetivo: Presentar formalmente la asignatura, conectando el currículo con la utilidad práctica y el mundo real.</p>
+                            <ul class="list-disc list-inside space-y-4">
+                                <li><strong>(0-5 min) Presentación de la Asignatura:</strong>
+                                    <p class="text-gray-700 mt-1 pl-4 border-l-2 border-gray-200">"Buenos días a todos y bienvenidos a Digitalización. Soy [Tu Nombre]. Estáis en 4º de la ESO, un curso clave, y esta asignatura está pensada para daros herramientas que vais a necesitar a partir de ya, tanto en bachillerato como en el mundo laboral. Según el currículo, el objetivo de esta materia es que aprendáis a desenvolveros de forma crítica, segura y creativa en la sociedad digital. No se trata de 'aprender a usar el ordenador', que eso ya lo hacéis. Se trata de entender cómo funcionan las cosas por detrás, de ser capaces de crear vuestras propias soluciones y de convertiros en ciudadanos digitales responsables. Vamos a trabajar por retos, de forma muy práctica, para que todo lo que hagamos aquí tenga una aplicación real."</p>
+                                </li>
+                                <li><strong>(5-8 min) Bienvenida y Conexión:</strong>
+                                    <p class="text-gray-700 mt-1">"Para empezar, quiero que penséis en una cosa. Hoy en día, casi cualquier trabajo que imaginéis, desde un mecánico hasta un diseñador o un médico, usa herramientas digitales. La digitalización no es el futuro, es el presente. Por eso, vamos a plantear esta asignatura como la construcción de vuestro 'Kit de Supervivencia Digital'. Un conjunto de habilidades que os van a hacer más competentes y autónomos. Pero antes, una pregunta rápida: levantad la mano, ¿quién ha buscado información en internet para hacer un trabajo? ¿Y quién ha usado una app para comunicarse con amigos o familiares hoy?" (Espera la respuesta, que será casi unánime).</p>
+                                     <div class="text-sm mt-2 space-y-2 pl-4 border-l-2 border-gray-200">
+                                        <p><span class="font-semibold text-purple-700">Finalidad:</span> Conectar inmediatamente la asignatura con sus acciones cotidianas más recientes. Demuestra que el contenido del curso (búsqueda de información, comunicación en red) no es algo ajeno, sino una profesionalización de lo que ya hacen.</p>
+                                        <p><span class="font-semibold text-blue-700">Tu comentario/transición:</span> "Perfecto. Como veis, ya estáis totalmente inmersos en el mundo digital. Lo que vamos a hacer aquí es daros el mapa y las herramientas para que no os perdáis y sepáis construir vuestro propio camino. Vamos a ver los módulos de nuestro 'Kit de Supervivencia'."</p>
+                                    </div>
+                                </li>
+                                <li><strong>(8-18 min) Módulos del Kit de Supervivencia Digital:</strong>
+                                    <p class="text-gray-700 mt-1">Presenta los bloques del curso (basados en tus SA) como si fueran los módulos de un kit profesional.</p>
+                                                                        <div class="mt-4 pl-4 border-l-2 border-gray-200 space-y-6">
+                                        <div>
+                                            <h4 class="font-bold text-lg text-gray-800">Módulo 1: Arquitectura Interna (SA1 & SA2)</h4>
+                                            <p>"El primer módulo es la caja de herramientas. Aprenderemos qué hay dentro de un ordenador: qué es un procesador, la memoria RAM... y cómo elegir los mejores componentes sin que te engañen. También veremos cómo se conectan los equipos en una red, como aquí en el instituto o en vuestra casa. <strong>Seréis capaces de diseñar un PC por piezas para una necesidad concreta y de montar una red doméstica segura.</strong>"</p>
+                                        </div>
+                                         <div>
+                                            <h4 class="font-bold text-lg text-gray-800">Módulo 2: Creación de Contenido (SA3 & SA4)</h4>
+                                            <p>"No basta con consumir, hay que saber crear. En este módulo, que es el más extenso, aprenderéis a usar herramientas profesionales para crear contenido multimedia: documentos, hojas de cálculo, infografías, edición de imagen, sonido y vídeo... Y lo más interesante: daremos un salto a la <strong>programación multiplataforma, donde diseñaréis vuestra propia App sencilla para móviles.</strong>"</p>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-lg text-gray-800">Módulo 3: Escudo Digital (SA5)</h4>
+                                            <p>"Este es el módulo de seguridad y autodefensa. Vivimos online, y eso tiene riesgos. Aquí aprenderemos a gestionar vuestra identidad digital, a proteger vuestros datos, a configurar la privacidad y, muy importante, a detectar amenazas como el phishing o las fake news. Hablaremos de <strong>ciberseguridad y de bienestar digital</strong> para usar la tecnología de forma saludable."</p>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-lg text-gray-800">Módulo 4: Ciudadanía y Comercio (SA6)</h4>
+                                            <p>"Finalmente, el módulo para actuar en el mundo real. Aprenderéis a realizar <strong>gestiones con la administración pública usando el certificado digital</strong> y la firma electrónica. También analizaremos el comercio electrónico: cómo comprar de forma segura, detectar fraudes y entender las nuevas formas de pago como las criptomonedas."</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Fase 2 -->
+                    <div class="flex flex-col md:flex-row items-start gap-6 p-4 border-l-4 border-[#FF6B6B]">
+                         <div class="flex-shrink-0 text-center md:text-left">
+                            <div class="bg-[#FF6B6B] text-white rounded-full w-20 h-20 flex flex-col items-center justify-center">
+                                <span class="text-2xl font-bold">Fase 2</span>
+                                <span class="text-xs">25 min</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-[#FF6B6B]">El Equipo: Perfiles y Objetivos</h3>
+                            <p class="text-gray-600 mb-4">Objetivo: Conocer a cada alumno, sus motivaciones y sus aspiraciones futuras, conectándolas con la asignatura.</p>
+                            <div class="mt-4 pl-4 border-l-2 border-gray-200 space-y-6">
+                                <div>
+                                    <h4 class="font-bold text-lg text-gray-800">1. Tu Perfil Digital (5 min)</h4>
+                                    <p class="mt-2 text-gray-700">"Ahora quiero conoceros un poco mejor a vosotros. En una hoja, vais a crear vuestro 'Perfil Digital' para este curso. Son solo tres puntos:"</p>
+                                    <div class="my-4 p-4 border border-dashed border-[#FF6B6B] rounded-lg bg-red-50">
+                                        <p class="font-bold text-center text-lg text-[#0B2D48]">PERFIL DIGITAL - [Tu Nombre]</p>
+                                        <p class="mt-2"><strong>1. Motivación:</strong> ¿Por qué elegiste esta asignatura? ¿Qué esperas aprender o qué te llama más la atención de los módulos que he explicado?</p>
+                                        <p class="mt-2"><strong>2. Habilidad Actual:</strong> ¿En qué te consideras bueno/a con la tecnología? (Ej: "se me da bien editar vídeos para TikTok", "soy bueno buscando información", "me monto mis propios PCs", "sé un poco de Photoshop"...)</p>
+                                        <p class="mt-2"><strong>3. Objetivo Futuro:</strong> ¿Tienes alguna idea de a qué te gustaría dedicarte en el futuro? ¿Cómo crees que la tecnología podría ayudarte en ese trabajo?</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg text-gray-800">2. Ronda de Presentaciones (20 min)</h4>
+                                    <p class="mt-2 text-gray-700">"Voy a empezar yo para que tengáis un ejemplo:"</p>
+                                    <div class="my-3 p-3 bg-blue-50 border-l-4 border-[#00A9E0] rounded-r-lg">
+                                        <p class="font-semibold">Tu ejemplo como modelo:</p>
+                                        <p><em class="text-gray-500">"Me llamo [Tu Nombre]. Mi motivación para dar esta asignatura es que creo que es una de las más útiles que vais a tener. Mi habilidad actual es, por ejemplo, la programación. Y mi objetivo es que cuando terminéis este curso, veáis la tecnología no como algo mágico, sino como una herramienta que podéis entender y controlar."</em></p>
+                                    </div>
+                                    <p>"Ahora vosotros. Por orden, os levantáis, decís vuestro nombre y compartís vuestro perfil. No hay respuestas correctas o incorrectas, lo importante es ser sinceros."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fase 3 -->
+                    <div class="flex flex-col md:flex-row items-start gap-6 p-4 border-l-4 border-[#FCCA46]">
+                         <div class="flex-shrink-0 text-center md:text-left">
+                            <div class="bg-[#FCCA46] text-black rounded-full w-20 h-20 flex flex-col items-center justify-center">
+                                <span class="text-2xl font-bold">Fase 3</span>
+                                <span class="text-xs">5 min</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-[#FCCA46]">Próxima Misión: Cierre y Avance</h3>
+                            <p class="text-gray-600 mb-4">Objetivo: Sintetizar, resolver dudas y establecer las expectativas para la siguiente clase.</p>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li><strong>(45-48 min) Resumen y Conexión:</strong> "Gracias a todos por compartir. Veo que muchos ya tenéis habilidades muy interesantes y objetivos claros. Me ha gustado oír que algunos queréis dedicaros al diseño, otros a la mecánica... Veremos cómo la digitalización es clave en todos esos campos."</li>
+                                <li><strong>(48-50 min) Anuncio de la Próxima Misión:</strong> "En la próxima clase, arrancamos con el Módulo 1. Empezaremos un reto: 'La Empresa JBG'. Vuestra primera misión será convertiros en consultores tecnológicos y diseñar desde cero el equipamiento informático que necesita una empresa. ¡Preparaos!"</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pedagogy-guide" class="bg-white p-6 md:p-8 rounded-lg shadow-lg mb-12">
+                <h2 class="text-3xl font-bold text-center text-[#0B2D48] mb-8">💡 Guía Pedagógica y de Gestión</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-4 border border-gray-200 rounded-lg">
+                        <h4 class="font-bold text-lg text-[#00A9E0] mb-2">Consejos de Gestión del Aula</h4>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li><strong>Fomenta un Clima de Respeto:</strong> Al ser la primera clase, establece la norma de que todas las habilidades y aspiraciones son válidas. Refuerza positivamente a los que comparten, sobre todo si se muestran vulnerables.</li>
+                            <li><strong>Gestiona el Tiempo en la Ronda:</strong> Si el grupo es grande, sé estricto con el tiempo. Si un alumno se extiende, agradécele y anímale a seguir la conversación después de clase.</li>
+                            <li><strong>Toma Notas:</strong> Utiliza una hoja para anotar nombres y los intereses/habilidades clave de cada alumno. Te será de oro para personalizar futuros ejemplos y formar grupos de trabajo equilibrados.</li>
+                        </ul>
+                    </div>
+                    <div class="p-4 border border-gray-200 rounded-lg">
+                        <h4 class="font-bold text-lg text-[#FF6B6B] mb-2">Preguntas para Fomentar la Participación</h4>
+                         <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li><strong>Si hay silencio:</strong> "¿Alguien ha tenido alguna vez un problema con un ordenador y no ha sabido cómo solucionarlo? Este curso os dará poder sobre eso."</li>
+                            <li><strong>Para conectar módulos:</strong> "Cuando hablamos de crear contenido (Módulo 2), ¿creéis que es importante saber sobre seguridad (Módulo 3)? ¿Por qué?"</li>
+                            <li><strong>Durante las presentaciones:</strong> "Interesante lo que comentas de [mencionar su objetivo futuro]. ¿Qué herramienta digital crees que es la más importante en esa profesión ahora mismo?"</li>
+                        </ul>
+                    </div>
+                    <div class="p-4 border border-gray-200 rounded-lg">
+                        <h4 class="font-bold text-lg text-[#FCCA46] mb-2">Consideraciones para la Diversidad</h4>
+                         <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li><strong>Diferentes Niveles:</strong> En la ronda de "Habilidad Actual", habrá alumnos muy avanzados y otros que se sientan inseguros. Valida ambas realidades. "Genial que ya sepas montar PCs, podrás ayudar a tus compañeros. Y si tu habilidad es usar Word, perfecto, porque vamos a llevarla a un nivel profesional".</li>
+                            <li><strong>Alumnado Tímido:</strong> Modela una respuesta breve y directa para que no se sientan presionados a dar un discurso. Si un alumno está muy bloqueado, ofrécele compartir solo su nombre y la parte que le resulte más cómoda.</li>
+                             <li><strong>Contexto del Centro:</strong> Tu programación menciona grupos de nivel medio y bajo-medio. Esta sesión es ideal para detectar quiénes pueden necesitar más andamiaje en los primeros retos y quiénes pueden actuar como "expertos" en ciertos temas.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="curriculum-connection" class="bg-white p-6 md:p-8 rounded-lg shadow-lg mb-12">
+                 <h2 class="text-3xl font-bold text-center text-[#0B2D48] mb-8">🔗 Conexión con el Currículo (C. Valenciana)</h2>
+                 <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Esta sesión inicial, aunque diagnóstica y de presentación, sienta las bases para el desarrollo de varias Competencias Específicas (CE) clave de la materia de Digitalización.</p>
+                 <div class="space-y-4 max-w-4xl mx-auto">
+                    <div class="p-4 border-l-4 border-blue-400 bg-blue-50 rounded-r-lg">
+                        <h4 class="font-bold text-lg text-blue-800">CE2: Organizar la información y el entorno personal de aprendizaje</h4>
+                        <p class="text-gray-700 mt-1">Al preguntar por sus habilidades actuales y motivaciones, iniciamos una reflexión sobre su propio entorno digital. La sesión les hace conscientes de las herramientas que ya usan y de las que necesitarán, primer paso para una gestión autónoma de su aprendizaje.</p>
+                    </div>
+                    <div class="p-4 border-l-4 border-red-400 bg-red-50 rounded-r-lg">
+                        <h4 class="font-bold text-lg text-red-800">CE3: Fomentar el bienestar en entornos digitales</h4>
+                        <p class="text-gray-700 mt-1">La presentación del "Módulo 3: Escudo Digital" introduce directamente la necesidad de aplicar medidas preventivas para proteger dispositivos, datos y la propia salud. Valida sus posibles preocupaciones y enmarca la seguridad como una competencia esencial.</p>
+                    </div>
+                    <div class="p-4 border-l-4 border-yellow-400 bg-yellow-50 rounded-r-lg">
+                        <h4 class="font-bold text-lg text-yellow-800">CE4: Ejercer una ciudadanía digital crítica</h4>
+                        <p class="text-gray-700 mt-1">Al hablar de gestiones administrativas, comercio electrónico y fake news, se presenta la asignatura como un pilar para un uso activo, responsable y ético de los medios digitales, conectando directamente con el ejercicio de una ciudadanía plena en la sociedad de la información.</p>
+                    </div>
+                    <div class="p-4 border-l-4 border-gray-400 bg-gray-50 rounded-r-lg">
+                        <h4 class="font-bold text-lg text-gray-800">CE5: Afrontar desafíos informáticos y digitales</h4>
+                        <p class="text-gray-700 mt-1">Toda la sesión se enmarca como un "entrenamiento" para formular soluciones. Al preguntarles por sus objetivos futuros, se les invita a analizar situaciones desde diferentes puntos de vista y a ver la digitalización como la herramienta para proponer soluciones creativas a los retos del siglo XXI.</p>
+                    </div>
+                 </div>
+            </section>
+
+            <section id="data-input" class="bg-white p-6 md:p-8 rounded-lg shadow-lg mb-12">
+                <h2 class="text-3xl font-bold text-center text-[#0B2D48] mb-2">Análisis Post-Sesión: Generador de Gráficas</h2>
+                <p class="text-center text-gray-600 mb-8">Introduce aquí los datos recogidos de los perfiles para visualizar las tendencias de la clase.</p>
+                <form id="data-form" class="max-w-4xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-bold text-[#0B2D48] mb-4">Motivación Principal (Nº Alumnos)</h3>
+                            <div class="space-y-4">
+                                <div><label for="interest-hw" class="block text-sm font-medium text-gray-700">Hardware y Redes (SA1/2)</label><input type="number" id="interest-hw" value="0" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#00A9E0] focus:ring-[#00A9E0] sm:text-sm"></div>
+                                <div><label for="interest-content" class="block text-sm font-medium text-gray-700">Creación Contenido/Apps (SA3/4)</label><input type="number" id="interest-content" value="0" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#00A9E0] focus:ring-[#00A9E0] sm:text-sm"></div>
+                                <div><label for="interest-security" class="block text-sm font-medium text-gray-700">Seguridad y Bienestar (SA5)</label><input type="number" id="interest-security" value="0" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#00A9E0] focus:ring-[#00A9E0] sm:text-sm"></div>
+                                <div><label for="interest-citizen" class="block text-sm font-medium text-gray-700">Ciudadanía/Comercio (SA6)</label><input type="number" id="interest-citizen" value="0" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#00A9E0] focus:ring-[#00A9E0] sm:text-sm"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-[#0B2D48] mb-4">Habilidades Previas (Nº Alumnos)</h3>
+                             <div class="space-y-4">
+                                <div><label for="skill-video" class="block text-sm font-medium text-gray-700">Edición de Vídeo/Imagen</label><input type="number" id="skill-video" value="0" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#00A9E0] focus:ring-[#00A9E0] sm:text-sm"></div>
+                                <div><label for="skill-social" class="block text-sm font-medium text-gray-700">Manejo de Redes Sociales</label><input type="number" id="skill-social" value="0" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#00A9E0] focus:ring-[#00A9E0] sm:text-sm"></div>
+                                <div><label for="skill-gaming" class="block text-sm font-medium text-gray-700">Gaming / Hardware</label><input type="number" id="skill-gaming" value="0" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#00A9E0] focus:ring-[#00A9E0] sm:text-sm"></div>
+                                <div><label for="skill-office" class="block text-sm font-medium text-gray-700">Ofimática (Word, etc.)</label><input type="number" id="skill-office" value="0" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#00A9E0] focus:ring-[#00A9E0] sm:text-sm"></div>
+                                <div><label for="skill-other" class="block text-sm font-medium text-gray-700">Otras</label><input type="number" id="skill-other" value="0" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-[#00A9E0] focus:ring-[#00A9E0] sm:text-sm"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <button type="submit" class="bg-[#00A9E0] text-white font-bold py-3 px-8 rounded-lg shadow-md hover:bg-[#0098c7] transition-colors">
+                            Generar y Actualizar Gráficas
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <section id="results-section" class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                 <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-[#0B2D48] mb-4">Análisis Visual: Motivación del Grupo</h3>
+                     <div id="interestChartWrapper" class="hidden">
+                        <div class="chart-container">
+                            <canvas id="interestDonutChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-[#0B2D48] mb-4">Análisis Visual: Punto de Partida (Habilidades)</h3>
+                     <div id="skillsChartWrapper" class="hidden">
+                        <div class="chart-container">
+                            <canvas id="skillsBarChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        let skillsChart = null;
+        let interestChart = null;
+        
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+
+        const COLORS = {
+            blue: '#00A9E0',
+            red: '#FF6B6B',
+            yellow: '#FCCA46',
+            dark: '#0B2D48',
+            grey: '#A1A1A1'
+        };
+
+        function updateCharts(event) {
+            event.preventDefault();
+
+            if (skillsChart) skillsChart.destroy();
+            if (interestChart) interestChart.destroy();
+
+            const interestHw = parseInt(document.getElementById('interest-hw').value) || 0;
+            const interestContent = parseInt(document.getElementById('interest-content').value) || 0;
+            const interestSecurity = parseInt(document.getElementById('interest-security').value) || 0;
+            const interestCitizen = parseInt(document.getElementById('interest-citizen').value) || 0;
+
+            const skillVideo = parseInt(document.getElementById('skill-video').value) || 0;
+            const skillSocial = parseInt(document.getElementById('skill-social').value) || 0;
+            const skillGaming = parseInt(document.getElementById('skill-gaming').value) || 0;
+            const skillOffice = parseInt(document.getElementById('skill-office').value) || 0;
+            const skillOther = parseInt(document.getElementById('skill-other').value) || 0;
+            
+            const interestData = {
+                labels: [['Hardware', '& Redes'], ['Creación', 'Contenido/Apps'], ['Seguridad', '& Bienestar'], ['Ciudadanía', '& Comercio']],
+                datasets: [{
+                    label: 'Intereses del Alumnado',
+                    data: [interestHw, interestContent, interestSecurity, interestCitizen],
+                    backgroundColor: [COLORS.blue, COLORS.red, COLORS.yellow, COLORS.grey],
+                    hoverOffset: 4
+                }]
+            };
+
+            const interestCtx = document.getElementById('interestDonutChart').getContext('2d');
+            interestChart = new Chart(interestCtx, {
+                type: 'doughnut',
+                data: interestData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'top' },
+                        tooltip: { callbacks: { title: tooltipTitleCallback } }
+                    }
+                }
+            });
+
+            const skillsData = {
+                labels: [['Edición', 'Vídeo/Imagen'], ['Manejo de', 'RRSS'], ['Gaming /', 'Hardware'], 'Ofimática', 'Otras'],
+                datasets: [{
+                    label: 'Habilidades Previas Declaradas',
+                    data: [skillVideo, skillSocial, skillGaming, skillOffice, skillOther],
+                    backgroundColor: 'rgba(0, 169, 224, 0.7)',
+                    borderColor: COLORS.blue,
+                    borderWidth: 1
+                }]
+            };
+
+            const skillsCtx = document.getElementById('skillsBarChart').getContext('2d');
+            skillsChart = new Chart(skillsCtx, {
+                type: 'bar',
+                data: skillsData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: { y: { beginAtZero: true } },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { callbacks: { title: tooltipTitleCallback } }
+                    }
+                }
+            });
+
+            document.getElementById('skillsChartWrapper').classList.remove('hidden');
+            document.getElementById('interestChartWrapper').classList.remove('hidden');
+        }
+
+        document.getElementById('data-form').addEventListener('submit', updateCharts);
+        
+        window.addEventListener('load', () => {
+             document.getElementById('data-form').dispatchEvent(new Event('submit'));
+        });
+    </script>
+</body>
+</html>
+
+
