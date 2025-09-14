@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes para Alumnos: Arquitectura de Ordenadores</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .section-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .component-card {
+            background-color: #f9fafb;
+            border-radius: 0.5rem;
+            border: 1px solid #e5e7eb;
+            padding: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-[#164e63] leading-tight">Arquitectura<br><span class="text-[#0891b2]">del Ordenador</span></h1>
+            <p class="mt-4 text-lg text-gray-600">Una guía para entender las piezas de tu PC y convertirte en un experto.</p>
+        </header>
+
+        <main>
+            <section class="section-card">
+                <h2 class="text-3xl font-bold text-[#164e63] mb-4">1. La representación digital de la información</h2>
+                <p class="text-gray-700 mb-4">¿Alguna vez te has preguntado cómo un ordenador guarda tus fotos, tu música o tus trabajos de clase? Todo, absolutamente todo, lo convierte a un lenguaje que puede entender: el <strong>código binario</strong>.</p>
+                <p class="text-gray-700 mb-4"><strong>¿Qué es el código binario?</strong> Es un sistema de numeración que solo utiliza dos dígitos: el <strong>0</strong> y el <strong>1</strong>. Para un ordenador, estos números representan estados eléctricos: 0 es "apagado" (no hay corriente) y 1 es "encendido" (sí hay corriente).</p>
+                
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="component-card">
+                        <h3 class="text-xl font-bold text-gray-800">Bit y Byte:</h3>
+                        <ul class="mt-2 list-disc list-inside text-gray-700 space-y-2">
+                            <li>Un <strong>Bit</strong> es la unidad de información más pequeña. Es un único 0 o un 1.</li>
+                            <li>Un <strong>Byte</strong> es un conjunto de 8 bits. Con un byte ya podemos representar letras, números y símbolos. Por ejemplo, la letra 'A' en binario es 01000001.</li>
+                        </ul>
+                    </div>
+                    <div class="component-card">
+                        <h3 class="text-xl font-bold text-gray-800">Unidades de Medida:</h3>
+                        <p class="mt-2 text-gray-700">Igual que medimos la distancia en metros, la información digital también tiene sus unidades:</p>
+                         <ul class="mt-2 list-disc list-inside text-gray-700 space-y-1">
+                            <li><strong>Kilobyte (KB):</strong> 1.024 Bytes.</li>
+                            <li><strong>Megabyte (MB):</strong> 1.024 KB.</li>
+                            <li><strong>Gigabyte (GB):</strong> 1.024 MB.</li>
+                            <li><strong>Terabyte (TB):</strong> 1.024 GB.</li>
+                        </ul>
+                    </div>
+                </div>
+                 <h4 class="font-bold text-center text-lg text-gray-800 mt-10 mb-4">Cómo Convertir entre Unidades</h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
+                    <div class="p-4 bg-blue-50 border-l-4 border-blue-400 rounded-r-lg">
+                        <h5 class="font-bold text-blue-800 text-lg">De Unidad Grande a Pequeña: MULTIPLICAR</h5>
+                        <p class="text-sm text-gray-600 mt-2">Para saber cuántas unidades pequeñas caben en una grande, multiplicamos en cada "salto".</p>
+                        <p class="mt-4 font-semibold">Ejemplo: ¿Cuántos bits son 2 Gigabytes (GB)?</p>
+                        <ol class="list-decimal list-inside mt-2 text-sm space-y-1">
+                            <li>De GB a MB: <code class="bg-gray-200 p-1 rounded">2 GB * 1024 = 2,048 MB</code></li>
+                            <li>De MB a KB: <code class="bg-gray-200 p-1 rounded">2,048 MB * 1024 = 2,097,152 KB</code></li>
+                            <li>De KB a Bytes: <code class="bg-gray-200 p-1 rounded">2,097,152 KB * 1024 = 2,147,483,648 Bytes</code></li>
+                            <li>De Bytes a bits: <code class="bg-gray-200 p-1 rounded">2,147,483,648 Bytes * 8 = 17,179,869,184 bits</code></li>
+                        </ol>
+                    </div>
+                    <div class="p-4 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
+                        <h5 class="font-bold text-green-800 text-lg">De Unidad Pequeña a Grande: DIVIDIR</h5>
+                        <p class="text-sm text-gray-600 mt-2">Para saber cuántas unidades grandes podemos formar con muchas pequeñas, dividimos en cada "salto".</p>
+                         <p class="mt-4 font-semibold">Ejemplo 1: ¿Cuántos Bytes son 24,000 bits?</p>
+                         <ol class="list-decimal list-inside mt-2 text-sm space-y-1">
+                            <li>Solo hay un paso (de bits a Bytes), así que dividimos entre 8: <code class="bg-gray-200 p-1 rounded">24,000 bits / 8 = 3,000 Bytes</code></li>
+                        </ol>
+                         <p class="mt-4 font-semibold">Ejemplo 2: ¿Cuántos Terabytes (TB) son 5,000,000,000 Kilobytes (KB)?</p>
+                         <ol class="list-decimal list-inside mt-2 text-sm space-y-1">
+                            <li>De KB a MB: <code class="bg-gray-200 p-1 rounded">5,000,000,000 KB / 1024 = 4,882,812.5 MB</code></li>
+                            <li>De MB a GB: <code class="bg-gray-200 p-1 rounded">4,882,812.5 MB / 1024 = 4,768.37 GB</code></li>
+                            <li>De GB a TB: <code class="bg-gray-200 p-1 rounded">4,768.37 GB / 1024 ≈ 4.66 TB</code></li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section-card">
+                <h2 class="text-3xl font-bold text-[#164e63] mb-4">2. Diseño de un ordenador personal: Los componentes</h2>
+                <p class="text-gray-700 mb-6">Un ordenador es como un equipo, donde cada pieza tiene una función vital. Se dividen en componentes internos y periféricos.</p>
+                
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Componentes Internos (El Corazón de la Máquina)</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="component-card">
+                        <h3 class="text-xl font-bold">Placa Base (Motherboard)</h3>
+                        <p class="mt-2 text-gray-600">Es el "esqueleto" del ordenador. Una gran placa a la que se conectan todos los demás componentes para que puedan comunicarse entre sí.</p>
+                    </div>
+                    <div class="component-card">
+                        <h3 class="text-xl font-bold">CPU (Procesador)</h3>
+                        <p class="mt-2 text-gray-600">Es el "cerebro". Se encarga de ejecutar las instrucciones y realizar los cálculos. Marcas famosas: Intel y AMD.</p>
+                    </div>
+                    <div class="component-card">
+                        <h3 class="text-xl font-bold">Memoria RAM</h3>
+                        <p class="mt-2 text-gray-600">Es la "memoria a corto plazo". Almacena los datos de los programas que estás usando en ese momento.</p>
+                    </div>
+                    <div class="component-card col-span-1 md:col-span-2 lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-4">
+                         <div>
+                            <h3 class="text-xl font-bold">Disco Duro o Almacenamiento</h3>
+                            <p class="mt-2 text-gray-600">Es la "memoria a largo plazo". Aquí se guardan tus archivos y programas.</p>
+                        </div>
+                        <div class="space-y-2">
+                             <p><strong>HDD:</strong> Discos mecánicos, más lentos pero con más capacidad.</p>
+                             <p><strong>SSD:</strong> Discos de estado sólido, mucho más rápidos.</p>
+                        </div>
+                    </div>
+                    <div class="component-card">
+                        <h3 class="text-xl font-bold">Tarjeta Gráfica (GPU)</h3>
+                        <p class="mt-2 text-gray-600">Un procesador especializado en generar imágenes. Fundamental para videojuegos o diseño. Marcas: NVIDIA y AMD.</p>
+                    </div>
+                    <div class="component-card">
+                        <h3 class="text-xl font-bold">Fuente de Alimentación</h3>
+                        <p class="mt-2 text-gray-600">Es el "corazón" que bombea energía a todos los componentes.</p>
+                    </div>
+                     <div class="component-card">
+                        <h3 class="text-xl font-bold">Caja o Torre</h3>
+                        <p class="mt-2 text-gray-600">La "carcasa" que protege todos los componentes internos.</p>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-semibold text-gray-800 mt-10 mb-4">Periféricos y Puertos (Tus Herramientas de Comunicación)</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                     <div class="component-card">
+                        <h3 class="text-xl font-bold">Periféricos</h3>
+                        <ul class="mt-2 list-disc list-inside text-gray-700 space-y-2">
+                            <li><strong>De Entrada (Le das órdenes al PC):</strong> Teclado, Ratón, Micrófono, Webcam, Escáner, Tableta Gráfica.</li>
+                            <li><strong>De Salida (El PC te muestra resultados):</strong> Monitor, Impresora, Altavoces, Auriculares, Proyector.</li>
+                        </ul>
+                    </div>
+                    <div class="component-card">
+                        <h3 class="text-xl font-bold">Puertos Más Comunes</h3>
+                        <ul class="mt-2 list-disc list-inside text-gray-700 space-y-2">
+                            <li><strong>USB (Tipo A, Tipo C):</strong> Para conectar casi todo. El tipo C es más moderno, rápido y reversible.</li>
+                            <li><strong>HDMI / DisplayPort:</strong> Para conectar el monitor. DisplayPort suele ser mejor para gaming a altas tasas de refresco.</li>
+                            <li><strong>VGA / DVI:</strong> Conectores de vídeo más antiguos, aún presentes en algunos monitores y proyectores.</li>
+                            <li><strong>Ethernet (RJ-45):</strong> Para conectarte a internet por cable.</li>
+                            <li><strong>Jack de Audio:</strong> Para auriculares y micrófonos.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-card">
+                <h2 class="text-3xl font-bold text-[#164e63] mb-4">3. ¿Cómo elegir componentes? Guía de Montaje</h2>
+                <p class="text-gray-700 mb-6">Montar tu propio ordenador te permite elegir exactamente lo que necesitas. La clave está en el equilibrio y la compatibilidad.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Criterios de Selección</h3>
+                        <h4 class="font-bold text-lg">¿Para qué lo vas a usar?</h4>
+                        <ul class="list-disc list-inside mt-2 space-y-2">
+                            <li><strong>Uso básico (ofimática, internet):</strong> No necesitas componentes muy potentes. Un procesador modesto, 8 GB de RAM y un SSD de 256 GB es suficiente.</li>
+                            <li><strong>Gaming:</strong> La tarjeta gráfica (GPU) es la prioridad. Necesitarás también un buen procesador y al menos 16 GB de RAM.</li>
+                            <li><strong>Edición de vídeo/diseño:</strong> Necesitas un procesador muy potente (muchos núcleos), mucha RAM (32 GB o más) y una buena tarjeta gráfica.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">¡Que no se te olvide la compatibilidad!</h3>
+                        <p class="mt-2">Fija un presupuesto y busca el equilibrio. No tiene sentido comprar la mejor GPU si la CPU es muy lenta (crearías un "cuello de botella"). Y lo más importante: <strong>no todos los componentes son compatibles entre sí.</strong></p>
+                        <h4 class="font-bold text-lg mt-4">¿Cómo lo compruebo?</h4>
+                        <ul class="list-disc list-inside mt-2 space-y-2 text-sm">
+                           <li><strong>CPU ↔ Placa Base:</strong> El <strong>socket</strong> (el "enchufe") debe ser idéntico. Ve a la web del fabricante de la placa y busca la "Lista de CPU Soportadas". <span class="font-semibold text-red-600">Ej: Un procesador con socket AM5 de AMD no encajará en una placa con socket LGA1700 de Intel.</span></li>
+                           <li><strong>RAM ↔ Placa Base:</strong> El <strong>tipo de RAM</strong> (DDR4 o DDR5) debe ser el que soporta la placa. Lo indica claramente la web del fabricante de la placa en su sección de "Especificaciones".</li>
+                           <li><strong>Componentes ↔ Caja:</strong> El <strong>tamaño</strong> de la tarjeta gráfica y del disipador de la CPU debe ser menor que el espacio máximo que permite la caja. Esta información ("longitud máxima de GPU", etc.) está en la ficha técnica de la caja en la web del fabricante.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+             <section class="section-card">
+                <h2 class="text-3xl font-bold text-[#164e63] mb-4">4. Actitud crítica y consumo responsable</h2>
+                <p class="text-gray-700 mb-6">Tener la última tecnología es genial, pero también conlleva una responsabilidad.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div>
+                        <h4 class="font-bold text-lg">Consumo energético</h4>
+                        <p class="mt-2">Los ordenadores potentes consumen mucha electricidad. Apágalo cuando no lo uses y elige componentes con buena eficiencia energética.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg">Basura electrónica (e-waste)</h4>
+                        <p class="mt-2">Los componentes electrónicos contienen materiales tóxicos. No los tires a la basura normal. Llévalos a un punto limpio.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-lg">Sostenibilidad y vida útil</h4>
+                        <p class="mt-2">¿Realmente necesitas cambiar de móvil cada año? A menudo, una pequeña mejora (como más RAM o un SSD) puede darle una segunda vida a tu equipo.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-card">
+                <h2 class="text-3xl font-bold text-[#164e63] mb-4">5. Interacción y rendimiento: El baile de los componentes</h2>
+                <p class="text-gray-700 mb-6">Imagina que abres un videojuego. ¿Qué ocurre dentro de tu PC?</p>
+                <ol class="list-decimal list-inside space-y-2">
+                    <li>Haces doble clic en el icono. El <strong>procesador (CPU)</strong> recibe la orden.</li>
+                    <li>La CPU le pide al <strong>disco duro (SSD/HDD)</strong> que busque los archivos del juego.</li>
+                    <li>Los datos más importantes del juego se cargan del disco a la <strong>memoria RAM</strong>, que es mucho más rápida.</li>
+                    <li>La CPU procesa la lógica del juego (movimientos, físicas...), mientras que la <strong>tarjeta gráfica (GPU)</strong> se encarga de dibujar todo el mundo 3D.</li>
+                    <li>La GPU envía la imagen final al <strong>monitor</strong>.</li>
+                </ol>
+                <p class="mt-6 font-semibold text-center bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-r-lg">El rendimiento de tu ordenador depende de lo bien y rápido que trabajen todos estos componentes juntos. Si uno es mucho más lento que los demás, frenará a todo el sistema. Es lo que se conoce como "cuello de botella". Un equipo equilibrado es la clave.</p>
+            </section>
+            
+            <section class="section-card bg-gray-200">
+                <h2 class="text-3xl font-bold text-center text-[#164e63] mb-2">¡Ahora tú! Pon a prueba tus conocimientos</h2>
+                <p class="text-center text-gray-600 mb-8">Usa lo que has aprendido para resolver estos escenarios.</p>
+                <div class="space-y-6 max-w-4xl mx-auto">
+                     <div class="p-4 bg-white border-l-4 border-purple-500 rounded-r-lg shadow">
+                        <h4 class="font-bold text-lg text-purple-800">Escenario 0: Tu Guía de Componentes</h4>
+                        <p class="text-gray-700 mt-2">Como primera tarea, vas a crear tu propia guía. Abre un documento de texto. Para cada uno de los 7 componentes internos, 6 periféricos (3 de Entrada y 3 de Salida) y 4 puertos que hemos visto: busca una imagen en internet, pégala en el documento y escribe al lado su nombre y una definición de una o dos líneas explicando para qué sirven.</p>
+                    </div>
+                    <div class="p-4 bg-white border-l-4 border-blue-500 rounded-r-lg shadow">
+                        <h4 class="font-bold text-lg text-blue-800">Escenario 1: El Gamer Profesional</h4>
+                        <p class="text-gray-700">Quiere jugar a los últimos lanzamientos en 4K y con los gráficos al máximo. No le importa tanto el espacio, ¡solo la fluidez!</p>
+                        <p class="mt-2 font-bold text-blue-900">Prioridad #1: ___________________</p>
+                    </div>
+                     <div class="p-4 bg-white border-l-4 border-green-500 rounded-r-lg shadow">
+                        <h4 class="font-bold text-lg text-green-800">Escenario 2: El Estudiante Multitarea</h4>
+                        <p class="text-gray-700">Suele tener abiertas 50 pestañas de Chrome para un trabajo, mientras escucha Spotify, tiene el Word abierto y está en una videollamada.</p>
+                         <p class="mt-2 font-bold text-green-900">Prioridad #1: ___________________</p>
+                    </div>
+                     <div class="p-4 bg-white border-l-4 border-yellow-500 rounded-r-lg shadow">
+                        <h4 class="font-bold text-lg text-yellow-800">Escenario 3: El Fotógrafo y Editor</h4>
+                        <p class="text-gray-700">Trabaja con fotos y vídeos en altísima resolución. Necesita que los programas de edición vayan rápido y, sobre todo, tener espacio para guardar gigas y gigas de material.</p>
+                         <p class="mt-2 font-bold text-yellow-900">Prioridad #1: ___________________</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</body>
+</html>
